@@ -22,10 +22,10 @@ public class SuccessorWithDelete {
 
     public static int smallestSuccessor(String entry) {
         int sequenceValue;
-        int nextIndex = sequence.indexOf(entry) + 1;
-        int nextValue =  nextIndex >= sequence.size() ? sequence.indexOf(entry) : nextIndex;
-        int smallestSuccessor = Integer.parseInt(sequence.get(nextValue));
-        for (int i = nextValue; i < sequence.size(); i++) {
+        int index = sequence.indexOf(entry) + 1;
+        int nextIndex =  index >= sequence.size() ? sequence.indexOf(entry) : nextIndex;
+        int smallestSuccessor = Integer.parseInt(sequence.get(nextIndex));
+        for (int i = nextIndex; i < sequence.size(); i++) {
             sequenceValue = Integer.parseInt(sequence.get(i));
             if (sequenceValue < smallestSuccessor) {
                 smallestSuccessor = sequenceValue;
