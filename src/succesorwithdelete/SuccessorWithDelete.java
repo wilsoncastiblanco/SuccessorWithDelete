@@ -23,7 +23,7 @@ public class SuccessorWithDelete {
     public static int smallestSuccessor(String entry) {
         int sequenceValue;
         int index = sequence.indexOf(entry) + 1;
-        int nextIndex =  index >= sequence.size() ? sequence.indexOf(entry) : nextIndex;
+        int nextIndex =  index >= sequence.size() ? sequence.indexOf(entry) : index;
         int smallestSuccessor = Integer.parseInt(sequence.get(nextIndex));
         for (int i = nextIndex; i < sequence.size(); i++) {
             sequenceValue = Integer.parseInt(sequence.get(i));
